@@ -1,0 +1,12 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-ACCESS
++r
+-COVERAGE
+all
+-ACCESS
+rw
+-DEFPARAM
+ral_top.min_trans=100

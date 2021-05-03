@@ -1,0 +1,434 @@
+xrun(64): 18.09-s011: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	18.09-s011: Started on Apr 08, 2021 at 21:39:29 -03
+xrun
+	-64bit
+	-uvm
+	../env/ral_pkg.sv
+	../env/ral_if.sv
+	../rtl/rtl_ral.sv
+	../env/ral_top.sv
+	+UVM_TESTNAME=ral_test_2
+	-covtest ral_test_2
+	-access +r
+	-input ./shm.tcl
+	+uvm_set_config_int=*,recording_detail,1
+	-coverage all
+	-covoverwrite
+	-access rw
+	-defparam ral_top.min_trans=100
+
+   User defined plus("+") options:
+	+uvm_set_config_int=*,recording_detail,1
+
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /usr/local/cds/XCELIUM1809/tools/methodology/UVM/CDNS-1.1d
+file: ../env/ral_pkg.sv
+            begin_tr(tr, "ral_driver");
+                   |
+xmvlog: *W,FUNTSK (../env/agent/ral_driver_i.sv,70|19): function called as a task without void'().
+			begin_tr(tr, "ral_monitor_i: tr");
+			       |
+xmvlog: *W,FUNTSK (../env/agent/ral_monitor_i.sv,52|10): function called as a task without void'().
+			begin_tr(tr, "ral_monitor_o: tr");
+			       |
+xmvlog: *W,FUNTSK (../env/agent/ral_monitor_o.sv,49|10): function called as a task without void'().
+      begin_tr(tr_out, "rfm");
+             |
+xmvlog: *W,FUNTSK (../env/ral_refmod.sv,79|13): function called as a task without void'().
+    uvm_config_db#(int)::get(this, "", "min_trans", limite);
+                           |
+xmvlog: *W,FUNTSK (../env/scoreboard/ral_cover.sv,30|27): function called as a task without void'().
+		rw.path         = "ral_top.dut.Banco[4]";
+		                                       |
+xmvlog: *W,ENUMERR (../env/reg_uvm/ral_reg_sequence.sv,20|41): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+	package worklib.ral_pkg:sv
+		errors: 0, warnings: 6
+file: ../env/ral_if.sv
+	interface worklib.ral_if:sv
+		errors: 0, warnings: 0
+file: ../rtl/rtl_ral.sv
+	module worklib.rtl_ral:sv
+		errors: 0, warnings: 0
+file: ../env/ral_top.sv
+	module worklib.ral_top:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		ral_pkg
+		ral_top
+    m_imp.write (t);
+              |
+xmelab: *W,FUNTSK (/usr/local/cds/XCELIUM1809/tools/methodology/UVM/CDNS-1.1d/sv/src/tlm1/uvm_analysis_port.svh,153|14): function called as a task without void'().
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+	Extracting FSMs for coverage:
+		worklib.rtl_ral
+		worklib.ral_top
+	Total FSMs extracted = 0
+    $display("cobertura:%d",$get_coverage());
+                                        |
+xmelab: *W,REALCV (../env/scoreboard/ral_cover.sv,45|40): Real argument converted to integer for (%d).
+	Building instance overlay tables: ....................
+		rw.path         = "ral_top.dut.Banco[4]";
+		                                       |
+xmelab: *W,ENUMERR (../env/reg_uvm/ral_reg_sequence.sv,20|41): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+ Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+xmelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+	Generating native compiled code:
+		worklib.uvm_pkg:sv <0x5fa8753b>
+			streams:   8, words:  8278
+		worklib.uvm_pkg:sv <0x2ce09296>
+			streams:   8, words:  7903
+		worklib.uvm_pkg:sv <0x38335e42>
+			streams:   7, words:  7262
+		worklib.uvm_pkg:sv <0x1ca140d9>
+			streams:   7, words:  1844
+		worklib.uvm_pkg:sv <0x7a7aa0c0>
+			streams:   9, words:  3380
+		worklib.uvm_pkg:sv <0x1409eb4b>
+			streams:  22, words: 60149
+		worklib.uvm_pkg:sv <0x649fb4d4>
+			streams:   7, words:  1844
+		worklib.uvm_pkg:sv <0x6c4f5f14>
+			streams:  28, words: 31431
+		worklib.uvm_pkg:sv <0x6a1cbaec>
+			streams:  27, words: 29748
+		worklib.uvm_pkg:sv <0x4e43ecbd>
+			streams:  23, words: 28205
+		worklib.uvm_pkg:sv <0x2b07c877>
+			streams:  17, words: 15680
+		worklib.uvm_pkg:sv <0x731e79e0>
+			streams:  26, words: 39490
+		worklib.uvm_pkg:sv <0x417a0f3d>
+			streams:   7, words:  2348
+		worklib.uvm_pkg:sv <0x2db4213a>
+			streams:  16, words: 20551
+		worklib.uvm_pkg:sv <0x46513331>
+			streams:  26, words: 35468
+		worklib.uvm_pkg:sv <0x51f2a9a2>
+			streams:  25, words: 62470
+		worklib.uvm_pkg:sv <0x176dae25>
+			streams:  27, words: 39022
+		worklib.uvm_pkg:sv <0x6977abbc>
+			streams:  26, words: 54834
+		worklib.uvm_pkg:sv <0x36070c23>
+			streams:  27, words: 42096
+		worklib.uvm_pkg:sv <0x1e28ecce>
+			streams:  25, words: 60800
+		worklib.uvm_pkg:sv <0x6472ee3d>
+			streams:  27, words: 44260
+		worklib.uvm_pkg:sv <0x5201d46b>
+			streams:  25, words: 66904
+		worklib.uvm_pkg:sv <0x3e619062>
+			streams:  27, words: 49806
+		worklib.uvm_pkg:sv <0x7543ca8f>
+			streams:  25, words: 59034
+		worklib.uvm_pkg:sv <0x372afe60>
+			streams:  25, words: 62189
+		worklib.uvm_pkg:sv <0x25a021ef>
+			streams:  27, words: 41168
+		worklib.uvm_pkg:sv <0x3a104656>
+			streams:  25, words: 58581
+		worklib.uvm_pkg:sv <0x4319e0a1>
+			streams:  29, words: 105796
+		worklib.uvm_pkg:sv <0x608195c3>
+			streams:  71, words: 140316
+		worklib.cdns_uvm_pkg:sv <0x35287d83>
+			streams:  28, words: 39360
+		worklib.cdns_uvm_pkg:sv <0x37fec66f>
+			streams:   9, words:  5179
+		worklib.cdns_uvm_pkg:sv <0x3c6fff8f>
+			streams:  10, words:  9339
+		worklib.uvm_pkg:sv <0x3aa5e376>
+			streams:  24, words: 31385
+		worklib.uvm_pkg:sv <0x7262bc42>
+			streams:  23, words: 40833
+		worklib.uvm_pkg:sv <0x28f0b34a>
+			streams:  24, words: 23417
+		worklib.uvm_pkg:sv <0x6720facd>
+			streams:   7, words:  3126
+		worklib.uvm_pkg:sv <0x51cfc6a2>
+			streams:  25, words: 31037
+		worklib.uvm_pkg:sv <0x1832fed0>
+			streams:  25, words: 35564
+		worklib.uvm_pkg:sv <0x5df63e2d>
+			streams:  25, words: 27157
+		worklib.uvm_pkg:sv <0x3b75fb49>
+			streams:  26, words: 31651
+		worklib.uvm_pkg:sv <0x2de8f87a>
+			streams:  22, words: 24936
+		worklib.uvm_pkg:sv <0x7e0f1c1c>
+			streams:  30, words: 43284
+		worklib.uvm_pkg:sv <0x0c818342>
+			streams:  22, words: 23626
+		worklib.uvm_pkg:sv <0x26be1fa8>
+			streams:   9, words:  5110
+		worklib.uvm_pkg:sv <0x261ebfeb>
+			streams:  24, words: 24922
+		worklib.uvm_pkg:sv <0x7bafd06c>
+			streams:  55, words: 70013
+		worklib.uvm_pkg:sv <0x3872e867>
+			streams:  28, words: 40043
+		worklib.uvm_pkg:sv <0x44aa9832>
+			streams:   7, words:  3126
+		worklib.uvm_pkg:sv <0x1b5a1a2e>
+			streams: 206, words: 260538
+		worklib.uvm_pkg:sv <0x1f1af77f>
+			streams:   7, words:  3126
+		worklib.uvm_pkg:sv <0x76dae094>
+			streams:  36, words: 44075
+		worklib.uvm_pkg:sv <0x2af9c347>
+			streams:  34, words: 34563
+		worklib.uvm_pkg:sv <0x23f8efb8>
+			streams:  33, words: 44525
+		worklib.ral_top:sv <0x7d6ba82d>
+			streams:  77, words: 129701
+		worklib.ral_pkg:sv <0x74f405c8>
+			streams: 314, words: 461913
+		worklib.cdns_uvm_pkg:sv <0x2e3a5925>
+			streams: 136, words: 284984
+		worklib.cdns_uvmapi:svp <0x5feccd57>
+			streams:  27, words: 36890
+		worklib.cdns_assert2uvm_pkg:sv <0x45ae6acb>
+			streams:   3, words:  2525
+		worklib.uvm_pkg:sv <0x7eafe582>
+			streams: 4718, words: 9303267
+		worklib.rtl_ral:sv <0x7417b9e7>
+			streams:   4, words:  1946
+logic [7:0] Banco [7:0];
+                |
+xmelab: *W,COVMDD (../rtl/rtl_ral.sv,12|16): Toggle coverage for bit, logic, reg, wire, and struct multi-dimensional static arrays and vectors is not supported by default. To enable toggle coverage on for these types specify 'set_toggle_scoring -sv_mda [<max_bit_base2_exponent>] [-sv_mda_of_struct]' ccf command in the coverage configuration file.
+	Building instance specific data structures.
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       2       2
+		Interfaces:                    1       1
+		Verilog packages:              5       5
+		Registers:                 14624   10339
+		Scalar wires:                  3       -
+		Vectored wires:                4       -
+		Named events:                  4      22
+		Always blocks:                 2       2
+		Initial blocks:              314     158
+		Parallel blocks:              30      31
+		Pseudo assignments:            6       6
+		Assertions:                    4       4
+		Covergroup Instances:          0       1
+		SV Class declarations:       213     321
+		SV Class specializations:    414     414
+	Writing initial simulation snapshot: worklib.ral_top:sv
+Loading snapshot worklib.ral_top:sv .................... Done
+SVSEED default: 1
+xmsim: *W,RNDXCELON: Xceligen, the new SystemVerilog constraint solver is used. Disabling Xceligen and using the legacy constraint solver is possible with "xrun/xmsim -xceligen on=0 ...".
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /usr/local/cds/XCELIUM1809/tools/xcelium/files/xmsimrc
+xcelium> source /usr/local/cds/XCELIUM1809/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> database -open waves -shm
+Created SHM database waves
+xcelium> probe -create ral_top -depth all -all -memories -shm -database waves
+Created probe 1
+xcelium> run 
+----------------------------------------------------------------
+CDNS-UVM-1.1d (18.09-s011)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test ral_test_2...
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying config setting from the command line: +uvm_set_config_int=*,recording_detail,1
+UVM_INFO ../env/reg_uvm/ral_test_2.sv(16) @ 0: uvm_test_top [TEST] existe o hdl path
+UVM_INFO ../env/reg_uvm/block_reg_ral.sv(34) @ 0: reporter [TEST] NAO existe o hdl path
+Banco[0]
+UVM_INFO ../env/reg_uvm/block_reg_ral.sv(34) @ 0: reporter [TEST] NAO existe o hdl path
+Banco[1]
+UVM_INFO ../env/reg_uvm/block_reg_ral.sv(34) @ 0: reporter [TEST] NAO existe o hdl path
+Banco[2]
+UVM_INFO ../env/reg_uvm/block_reg_ral.sv(34) @ 0: reporter [TEST] NAO existe o hdl path
+Banco[3]
+UVM_INFO ../env/reg_uvm/block_reg_ral.sv(34) @ 0: reporter [TEST] NAO existe o hdl path
+Banco[4]
+UVM_INFO ../env/reg_uvm/block_reg_ral.sv(34) @ 0: reporter [TEST] NAO existe o hdl path
+Banco[5]
+UVM_INFO ../env/reg_uvm/block_reg_ral.sv(34) @ 0: reporter [TEST] NAO existe o hdl path
+Banco[6]
+UVM_INFO ../env/reg_uvm/block_reg_ral.sv(34) @ 0: reporter [TEST] NAO existe o hdl path
+Banco[7]
+SDI/Verilog Transaction Recording Facility Version 18.09-s011
+cobertura:          0
+dut.Banco[0] = 0
+dut.Banco[1] = 0
+dut.Banco[2] = 0
+cobertura:          0
+add_write: x e data_write: xx
+add_write: 0 e data_write: a0
+add_write: 1 e data_write: 0a
+add_write: 7 e data_write: 30
+add_write: 4 e data_write: 04
+add_write: 6 e data_write: 70
+add_write: 3 e data_write: 24
+add_write: 5 e data_write: f1
+cobertura:          0
+cobertura:          1
+cobertura:          1
+cobertura:          2
+cobertura:          2
+cobertura:          2
+cobertura:          3
+cobertura:          3
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+cobertura:          4
+
+
+Cont =         100
+
+
+UVM_INFO /usr/local/cds/XCELIUM1809/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 657: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   12
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[TEST]     9
+[TEST_DONE]     1
+[UVM_CMDLINE_PROC]     1
+Simulation complete via $finish(1) at time 657 NS + 46
+/usr/local/cds/XCELIUM1809/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+xcelium> exit 
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+xmsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.resp_cover" will be generated for covergroup instance "resp_cover" as the name of the covergroup instance is not specified explicitly: ../env/scoreboard/ral_cover.sv, 12.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  ral_top(ral_top)
+  scope    :  scope
+  testname :  ral_test_2
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_2100a4dc_58c66631.ucm
+  data               :  ./cov_work/scope/ral_test_2/icc_2100a4dc_58c66631.ucd
+TOOL:	xrun(64)	18.09-s011: Exiting on Apr 08, 2021 at 21:39:36 -03  (total: 00:00:07)
